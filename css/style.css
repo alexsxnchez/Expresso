@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    /*Colors*/
+    --tpSection: #445E58;
+    --contactSection: #EBD3B9;
+    --navigation: #CBAC8F;
+    --anchors: #8D6035;
+    --headerFooter: #000000;
+    /**Fonts*/
+    --primaryFont:  'Roboto', sans-serif;
+    --secondaryFont: 'Poppins', sans-serif;
+    --defaultFont: 'Tajawal', sans-serif;
+}
+/***********************************************
+*TABLE OF CONTENTS
+==================
+1. GENERAL SETUP/STYLE
+2. HEADER
+3. ABOUT ME
+4. PROJECT
+5. CONTACT
+6. FOOTER
+*/
+
+/*/ GENERAL SETUP / STYLE /*/
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+}
+body{
+    font-family: var(--defaultFont);
+    font-size: 16pt;
+}
+h1, h2, h3 {
+    font-family: var(--primaryFont);
+}
+a, p {
+    font-family: var(--secondaryFont);
+    font-size: 14pt;
+}
+.hidden {
+    display: none;
+}
+.page-container{
+    max-height: 100%;
+    margin: 0 auto;
+}
+/*/ HEADER /*/
+header{
+    width: 100%;
+}
+.topContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--headerFooter);
+}
+.menu-toggle{
+    display: none;
+}
+.menu{
+    margin:0;
+    display: flex;
+    flex-flow: row wrap;
+}
+.menu > li{
+    list-style-type: none;
+    font-weight: 500;
+    padding: 0 15px;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+}
+.menu a:after{
+    display: block;
+    position: relative;
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    border-bottom: 2px solid var(--navigation);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.menu a:hover{
+    color: var(--navigation);
+}
+.menu a:hover:after{
+    width: 100%; 
+}
+/*/ ABOUT SECTION /*/
+#aboutSection{
+    border-top: 1px solid #000000;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.aboutContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+.nameColor {
+    color: var(--anchors);
+}
+.paragraphText {
+    display: inline-block;
+    width: 50%;
+}
+.paragraphText > h1 {
+    font-size: 2em;
+}
+.paragraphText > span {
+    font-size: 0.9em;
+}
+.paragraphText > p {
+    margin: 30px 30px 30px 0;
+    font-family: var(--primaryFont);
+}
+#wave1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+/*/ TOP PICK SECTION /*/
+#topPickSection {
+    background-color: var(--tpSection);
+    display: inline-block;
+    width: 100%;
+}
+#topPickSection > h2 {
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 24pt;
+    padding-top: 30px;
+    padding-bottom: 14px;
+    text-align: center;
+    width: 100%;
+}
+#topPicks {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 1em 1em 2em 1em;
+}
+#topPicks img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(67, 88, 78);
+    margin: 0 10px;
+}
+#topPicks h3 {
+    width: 200px;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    font-size: 15pt;
+    margin-bottom: 10px;
+}
+.tpHover {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 200;
+    position: absolute;
+    margin: 0 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transition: 1s ease;
+    background-color: rgba(0, 0, 0, 0.473);
+    opacity: 0;
+}
+.tpHover span {
+    display: table;
+    margin: 45px auto;
+}
+.tpHover:hover {
+    opacity: 1;
+}
+/*/ CONTACT SECTION /*/
+#contactSection {
+    background-color: var(--contactSection);
+    position: relative;
+}
+.contactContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+#contactButton {
+    background-color: #0000001a;
+    padding: 20px 40px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+#contactButton a {
+    text-decoration: none;
+    color: white;
+}
+#contactButton div {
+    background-color: var(--anchors);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    margin-top: 20px;
+}
+#contactButton div:hover {
+    background-color: #694727;
+    cursor: pointer;
+}
+.contactContainer img {
+    z-index: 1;
+    height: 450px;
+    width: 420px;
+}
+#wave2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+#media {
+    background-color: #0000007d;
+    position: fixed;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    top: 150px;
+    right: 0;
+    z-index: 1;
+}
+#media a {
+    padding: 10px;
+    color: white;
+}
+#media a:hover {
+    color: #000000b4;
+}
+/*/ FOOTER /*/
+.footer {
+    background-color: var(--headerFooter);
+    width: 100%;
+}
+#copyright h3 {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 30px;
+}
+
+@media only screen and (max-width: 800px){
+    .contactContainer {
+        padding-top: 100px;
+    }
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+    #mainMenu .menu.show-small {
+        position: relative;
+        display: none;
+        background: grey;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        border-left: thin solid #000000;
+        margin-bottom: 0;
+    }
+    .menu {
+        padding: 0;
+        border-top: none;
+        display: flex;
+        flex-flow: column wrap;
+        z-index: 1;
+    }
+    .menu li {
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 643px){
+    .paragraphText {
+        width: 70%;
+        padding-bottom: 100px;
+    }
+    .paragraphText > p {
+        margin: 30px 0;
+    }
+}
+@media only screen and (max-width: 450px){
+    #aboutMainImg img {
+        height: 400px;
+    }
+    #contactButton {
+        width: 300px;
+    }
+    .contactContainer img {
+        height: 300px;
+        width: 270px;
+    }
+}

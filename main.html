@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Expresso</title>
+    <meta name = "portfolio" content = ""/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="img/logo/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css">
+</head>
+<!--HEADER-->
+<body>
+    <header id="header">
+        <div class="pageContainer">
+            <div class="topContainer">
+                <a href='#'><img src="img/logo/logo2x10-2.png" height="50" alt="the logo for Expresso"></a>
+                <nav id='mainMenu'>
+                    <div class='menu-toggle' onclick="toggleMenu()">
+                        <i class='fa fa-bars menubar-icon'></i>
+                        <div></div><div></div><div></div>
+                    </div>
+                    <ul class="menu show-small">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+    </header>
+    <!--END OF HEADER-->
+    <main>
+        <div class="page-container">
+            <!--ABOUT SECTION-->
+            <section id="aboutSection">
+                <!--h1 title sentence and introduction paragraph and button-->
+                <div class="aboutContainer">
+                    <!--main photo-->
+                    <div id="aboutMainImg">
+                        <img src="img/logo/logo4x2.png" height="500" alt="">
+                    </div>
+                    <div class="paragraphText">
+                        <h1 class="nameColor">Expresso</h1>
+                        <span>Made Quick & Fresh</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis 
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum 
+                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+                <svg viewBox="0 0 1440 320" preserveAspectRatio="xMinYMin meet" id="wave1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,160L48,154.7C96,149,192,139,288,138.7C384,139,480,149,576,181.3C672,213,768,267,864,288C960,309,1056,299,1152,288C1248,277,1344,267,1392,261.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" style="stroke: none; fill:#445E58;"></path>
+                </svg>
+            </section>
+            <!--END OF ABOUT ME SECTION-->
+            <!--TOP PICK SECTION
+                ===============-->
+            <section id="topPickSection">
+                <h2>Top 5 Picks</h2>
+                <div id="topPicks">
+                    <div>
+                        <a href="#" class="tpHover"><span>Order Now ($7.00/each)</span></a>
+                        <img src="img/coffeeart.jpg" alt="">
+                        <h3>Double Double</h3>
+                    </div>
+                    <div>
+                        <a href="#" class="tpHover"><span>Order Now ($2.00/each)</span></a>
+                        <img src = 'img/biscuits.jpg' alt="">
+                        <h3>Vanilla Macarons</h3>
+                    </div>
+                    <div>
+                        <a href="#" class="tpHover"><span>Order Now ($2.50/each)</span></a>
+                        <img src = 'img/chocolatebisctuits.jpg' alt="">
+                        <h3>Chocolate Filled Cookies</h3>
+                    </div>
+                    <div>
+                        <a href="#" class="tpHover"><span>Order Now ($8.45/each)</span></a>
+                        <img src = 'img/hotchocolate.jpg' alt="">
+                        <h3>Hot Whipped Chocolate</h3>
+                    </div>
+                    <div>
+                        <a href="#" class="tpHover"><span>Order Now ($6.50/each)</span></a>
+                        <img src = 'img/pepperminttea.jpg' alt="">
+                        <h3>Peppermint Tea</h3>
+                    </div>
+                </div>
+            </section>
+            <!--END OF PROJECT SECTION-->
+            <!--CONTACT SECTION
+                ===============-->
+            <section id="contactSection">
+                <svg viewBox="0 0 1440 320" preserveAspectRatio="xMinYMin meet" id="wave2" xmlns="http://www.w3.org/2000/svg">
+                    <path "#0099ff" fill-opacity="1" d="M0,0L80,5.3C160,11,320,21,480,53.3C640,85,800,139,960,160C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" style="stroke: none; fill:#445E58;"></path>
+                </svg>
+                <div class="contactContainer">
+                    <!--form contianer with submit button-->
+                    <div id="contactButton">
+                        <p>For any questions or concerns...</p>
+                        <a href="#"><div>Contact Us!</div></a>
+                    </div>
+                    <img src="img/logo/logo4x2-2.png" height="500" alt="">
+                </div>
+            </section>
+            <!--END OF CONTACT SECTION-->
+        </div>
+        <div id="media">
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+    </main>
+    <!--FOOTER-->
+    <footer>
+        <div class = 'footer'>
+            <section id = 'copyright'>
+                <h3>Expresso © Copyright Fake Site</h3>
+            </section>
+        </div>
+    </footer>
+    <script src = 'js/script.js'></script>
+</body><!--END OF BODY-->
+</html>

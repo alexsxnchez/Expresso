@@ -1,0 +1,130 @@
+#stage{ /*This is the border outside*/
+    height: 300px;
+    border: 1px solid #000;
+}
+#ball{ /*This is the ball itself*/
+    position: relative; /*This is for top-left*/
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: blue;
+}
+/*Define your key frames for the ball move*/
+@keyframes ball-move{ /*You can name it as you want*/
+    0%{ /*You can change this to 'from' instead of 0%*/
+        top: 0;
+        left: 0;
+    }
+    50%{
+        top: calc(100% - 75px); /*100% to the bottom minus 75px: which is the height of the ball*/
+        left: calc(50% - 37.5px); /*50% to the right minus 37.5px: which is half the width of the ball*/
+    }
+    100%{ /*You can change this to 'to' instead of 100%*/
+        top: 0;
+        left: calc(100% - 75px); /*100% to the right minus 75px: which is the width of the ball*/
+    } /*Always keep it consitent*/
+} /*End of key frame*/
+
+/*NOW animat the ball with keyframe inside*/
+#ball{
+    animation: ball-move 1s infinite; /*Keyframe name and 2s duration*/
+}
+/*Animation: 
+<name> <duration> <iteration-count> <direction>   
+<timing-function> <fill-mode> <delay>*/
+
+/*/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
+/*The properties within animation are: 
+- duration: how long the action will take.
+- timing-function: ease in, ease out, linear, etc.
+- daley: how long to wait before making an action.
+- iteration-count: is how many times you want it to run.
+---- you can add a number or use 'infinite'.
+- direction: the way it will face. 
+---- noraml, reverse, alternate, alternate-reverse.
+- fill-mode: what to do before an animation runs or ends.
+---- none, backwards, forwards, both.
+*//*/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/*/
+
+/*When I hover over stage*//*Something will happen to ball*/
+#ball:hover {
+    animation-play-state: paused; /*This will pause the ball if hovered over*/
+}
+
+#star-five {
+    position: relative;
+    display: block;
+    color: green;
+    top: -10px;
+    left: -10px;
+    width: 0px;
+    height: 0px;
+    border-right: 20px solid transparent;
+    border-bottom: 13px solid yellow;
+    border-left: 20px solid transparent;
+    transform: rotate(35deg);
+}
+#star-five:before {
+    border-bottom: 15px solid yellow;
+    border-left: 04px solid transparent;
+    border-right: 04px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -12px;
+    left: -11px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+#star-five:after{
+    position: absolute;
+    display: block;
+    color:green;
+    top: 0;
+    left: -20px;
+    width: 0px;
+    height: 0px;
+    border-right: 20px solid transparent;
+    border-bottom: 13px solid yellow;
+    border-left: 20px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+#rocket{
+    position: relative;
+    display: block;
+    color: purple;
+    left: 5px;
+    top: 0;
+    width: 0;
+    border-bottom: 40px solid purple;
+    border-right: 20px solid;
+}
+#rocket:before{
+    position: absolute;
+    display: block;
+    color:green;
+    content: '';
+    top: 40px;
+    left: 0;
+    border-right: 10px solid transparent;
+    border-top: 13px solid purple;
+    border-left: 10px solid transparent;
+}
+#rocket:after{
+    position: absolute;
+    display: block;
+    color:green;
+    content: '';
+    top: 10px;
+    left: -10px;
+    border-right: 20px solid transparent;
+    border-top: 30px solid purple;
+    border-left: 20px solid transparent;
+}
+
+
+
+
+
